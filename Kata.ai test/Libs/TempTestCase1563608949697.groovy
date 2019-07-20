@@ -14,7 +14,7 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.m
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.cucumber.keyword.internal.CucumberDriverCleaner())
 
 
-RunConfiguration.setExecutionSettingFile('C:\\Users\\erica\\AppData\\Local\\Temp\\Katalon\\Test Cases\\TC-Login03\\20190720_140938\\execution.properties')
+RunConfiguration.setExecutionSettingFile('C:\\Users\\erica\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Register\\TC-Reg01\\20190720_144909\\execution.properties')
 
 TestCaseMain.beforeStart()
 
@@ -34,13 +34,21 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-not_run: WebUI.openBrowser('')
+not_run: WebUI.openBrowser(GlobalVariable.urlSignUp)
 
 not_run: WebUI.maximizeWindow()
 
-not_run: WebUI.navigateToUrl(GlobalVariable.urlLogin)
+not_run: WebUI.setText(findTestObject('signUpObject/txtUsername'), GlobalVariable.signUpUsername)
 
-WebUI.verifyElementPresent(findTestObject('LoginObject/disabledBtnLogin'), 0)
+not_run: WebUI.setText(findTestObject('signUpObject/txtEmail'), GlobalVariable.signUpEmail)
 
-''', 'Test Cases/TC-Login03', new TestCaseBinding('Test Cases/TC-Login03',[:]), FailureHandling.STOP_ON_FAILURE , false)
+not_run: WebUI.selectOptionByValue(findTestObject('signUpObject/selectAccountType'), 'developers', false)
+
+not_run: WebUI.setText(findTestObject('signUpObject/txtCompany'), GlobalVariable.signUpCompany)
+
+WebUI.click(findTestObject('signUpObject/captcha'))
+
+WebUI.delay(2)
+
+''', 'Test Cases/Register/TC-Reg01', new TestCaseBinding('Test Cases/Register/TC-Reg01',[:]), FailureHandling.STOP_ON_FAILURE , false)
     

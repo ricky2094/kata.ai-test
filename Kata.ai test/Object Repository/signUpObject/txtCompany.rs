@@ -7,23 +7,30 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@class = 'sc-eqIVtm dVBWjj' and @name = 'company']</value>
+         <value>//*[@id=&quot;___gatsby&quot;]/div/div/div[2]/div/div[2]/div[1]/div/div[1]/form/div[4]/div[1]/input</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
       <value>sc-eqIVtm dVBWjj</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
       <value>company</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@id=&quot;___gatsby&quot;]/div/div/div[2]/div/div[2]/div[1]/div/div[1]/form/div[4]/div[1]/input</value>
    </webElementProperties>
 </WebElementEntity>
